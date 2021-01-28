@@ -1,0 +1,40 @@
+.header {
+  padding: 7rem 8rem;
+
+  @include breakpoint-down(medium) {
+    padding: 2rem 1.8rem;
+  }
+
+  @include flex(space-between, center, row);
+  &__logo {
+    flex: 4;
+
+    @include breakpoint-down(medium) {
+      flex: 1;
+    }
+
+    img {
+      width: 18rem;
+      @include breakpoint-down(medium) {
+        width: 7.5rem;
+      }
+    }
+  }
+
+  &__ul {
+    flex: 1;
+    list-style: none;
+
+    @include flex(space-between, center, row);
+  }
+
+  &__links {
+    color: #adadad;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
