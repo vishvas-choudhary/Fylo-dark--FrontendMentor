@@ -1,0 +1,46 @@
+.features--wrapper {
+  background-color: $darkBlue--main;
+  padding-bottom: 12.5rem;
+
+  @include breakpoint-down(small) {
+    padding-bottom: 13.5rem;
+  }
+}
+
+.features {
+  text-align: center;
+  &__groups {
+    @include flex(space-around, center, row);
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: 9rem;
+
+      @include breakpoint-down(small) {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+
+  &__card {
+    img {
+      margin-bottom: 3rem;
+    }
+
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      max-width: 34rem;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    &:not(:last-child) {
+      @include breakpoint-down(small) {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+}
