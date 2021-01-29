@@ -72,11 +72,12 @@ a {
 .button {
   position: relative;
   display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $white;
   background: linear-gradient(to left, $cyan-cta, $blue-cta);
   border-radius: 100px;
   cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
 
   &::before {
     content: "";
@@ -89,10 +90,12 @@ a {
     left: 0;
     background-color: $white;
     border-radius: 100px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
   }
 
-  &:hover {
-    opacity: 0.7;
+  &:hover::before {
+    opacity: 0.3;
   }
 
   &__p-long {

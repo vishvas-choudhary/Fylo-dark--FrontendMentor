@@ -1,0 +1,40 @@
+.hero {
+  text-align: center;
+  margin-bottom: 16rem;
+
+  @include breakpoint-down(small) {
+    margin-bottom: 11.5rem;
+  }
+  &__image {
+    margin-bottom: 4rem;
+
+    @include breakpoint-down(medium) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  h1 {
+    line-height: 1.5;
+    max-width: 68rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    @include breakpoint-down(small) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 1.7;
+    color: $gray;
+    max-width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+    @include breakpoint-down(small) {
+      font-size: 1.4rem;
+    }
+  }
+}
