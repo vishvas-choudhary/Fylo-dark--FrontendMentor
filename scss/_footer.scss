@@ -1,0 +1,96 @@
+.footer--wrapper {
+  background-color: $darkBlue--footer;
+  padding: 19rem 0 9rem;
+
+  @include breakpoint-down(small) {
+    padding: 14rem 0 3.5rem;
+  }
+}
+
+.footer {
+  &__logo {
+    margin-bottom: 4rem;
+  }
+
+  &__grid {
+    @include flex(space-between, start, row);
+    flex-wrap: wrap;
+
+    @include breakpoint-down(small) {
+      display: block;
+    }
+  }
+
+  &__block-1 {
+    @include flex(center, center, row);
+    max-width: 35rem;
+    img {
+      align-self: baseline;
+      margin-right: 2rem;
+    }
+
+    @include breakpoint-down(small) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__block-2 {
+    .contact {
+      margin-bottom: 2rem;
+    }
+    img {
+      margin-right: 2rem;
+    }
+    p {
+      display: inline;
+    }
+
+    @include breakpoint-down(small) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__block-3,
+  &__block-4 {
+    a {
+      display: block;
+      color: $gray;
+      margin-bottom: 2rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__block-3 {
+    @include breakpoint-down(small) {
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  &__block-4 {
+    @include breakpoint-down(small) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__block-5 {
+    text-align: center;
+    i {
+      width: 3.5rem;
+      border: 1px solid $gray;
+      border-radius: 100%;
+      color: $gray;
+      padding: 1rem;
+      margin-right: 1rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $cyan-cta;
+        border-color: $cyan-cta;
+      }
+    }
+  }
+}
